@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A5DB65D-CADF-4D72-96DA-256C043A964B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MasterFixture</RootNamespace>
+    <AssemblyName>MasterFixture</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="connection.cs" />
+    <Compile Include="fixtureDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fixtureDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fixtureDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fixtureDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fixtureDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fixtureDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fixtureDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fixtureDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fixtureDBpersonalName.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fixtureDBpersonalName.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fixtureDBproducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fixtureDBproducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="fixtureDBDataSet.xsc">
+      <DependentUpon>fixtureDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fixtureDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fixtureDBDataSet.xss">
+      <DependentUpon>fixtureDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBDataSet1.xsc">
+      <DependentUpon>fixtureDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fixtureDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fixtureDBDataSet1.xss">
+      <DependentUpon>fixtureDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBDataSet2.xsc">
+      <DependentUpon>fixtureDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fixtureDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fixtureDBDataSet2.xss">
+      <DependentUpon>fixtureDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBDataSet3.xsc">
+      <DependentUpon>fixtureDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fixtureDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fixtureDBDataSet3.xss">
+      <DependentUpon>fixtureDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBpersonalName.xsc">
+      <DependentUpon>fixtureDBpersonalName.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBpersonalName.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fixtureDBpersonalName.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fixtureDBpersonalName.xss">
+      <DependentUpon>fixtureDBpersonalName.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBproducts.xsc">
+      <DependentUpon>fixtureDBproducts.xsd</DependentUpon>
+    </None>
+    <None Include="fixtureDBproducts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fixtureDBproducts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fixtureDBproducts.xss">
+      <DependentUpon>fixtureDBproducts.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fixtureDB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
